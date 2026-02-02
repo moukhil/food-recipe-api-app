@@ -1,0 +1,160 @@
+:root {
+    --primary: #E76F51;
+    --accent: #F4C430;
+    --background: #FFF3E0;
+    --text: #4A4A4A;
+    --button: #D62828; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.navBar {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+.navBar h1{
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navBar form{
+    display: flex;
+    justify-content: center;
+}
+.navBar input{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.navBar button {
+    background-color: var(--button);
+    color: #fff;
+}
+.navBar button:hover{
+    background-color: #830000;
+}
+.navBar input , .navBar button{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 750px) {
+    .navBar{
+        flex-direction: column;
+    }
+
+    .navBar form{
+        width: 80%;
+        margin-top: 15px;
+    }
+}
+
+.mainContainer{
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 10px;
+    width: 80%;
+    margin: 10px auto;
+    place-items: center;
+}
+
+.card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    border-radius: 6px;
+    box-shadow: 0px 5px 10px rgba(78, 73, 73, 0.1) , -5px -5px 10px rgba(34, 34, 34, 0.5);
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img{
+    height: 350px;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.card h3{
+    font-size: 24px;
+}
+
+.card p{
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+
+.card button{
+    border: none;
+    outline: none;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: var(--button);
+    color: #fff;
+    cursor: pointer;
+}
+
+.card button:hover{
+    background-color: #830000;
+}
+.card:hover{
+    transform: scale(1.02);
+}
+
+.recipeContainer{
+    width: 80%;
+    display: none;
+    position:fixed ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    background-color: var(--primary);
+    border-radius: 6px;
+    padding: 25px;
+}
+
+.recipeContainer button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: var(--button);
+    color: #fff;
+    cursor: pointer;
+}
+
+.recipeContainer button:hover{
+    background-color: #830000;
+}
